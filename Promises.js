@@ -49,3 +49,15 @@ async function funcionConAsync() {
 }
 
 funcionConAsync().then((valor) => console.log(valor));
+
+async function funcionConAsynAwait() {
+  console.log("Inicio...");
+  let miPromesa = new Promise((res) => {
+    setTimeout(() => {
+      res("Resolvio la Promesa");
+    }, 5000);
+  });
+  console.log(await miPromesa);
+  console.log("Fin...");
+}
+funcionConAsynAwait();
